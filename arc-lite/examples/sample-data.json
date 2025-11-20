@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {"id":1,"name":"Student Answers DB","owner":"Course Team","type":"database","description":"Stores scanned answers"},
+    {"id":2,"name":"Grading Web UI","owner":"Course Team","type":"webapp","description":"Frontend for grading"},
+    {"id":3,"name":"File Storage","owner":"Ops","type":"cloud-storage","description":"Stores scanned images"}
+  ],
+  "risks": [
+    {"id":1,"asset_id":1,"threat":"Unauthorized access","vulnerability":"Weak passwords","likelihood":4,"impact":5,"mitigation":"MFA","residual_likelihood":2,"residual_impact":4,"status":"Open"},
+    {"id":2,"asset_id":2,"threat":"Data leak","vulnerability":"No encryption at rest","likelihood":3,"impact":5,"mitigation":"Enable AES-256","residual_likelihood":2,"residual_impact":3,"status":"Open"}
+  ],
+  "vendors":[
+    {"id":1,"name":"Local Cloud Storage Co","data_sensitivity":4,"access_level":3,"compliance_score":60,"notes":"Needs SOC2 or NDA"},
+    {"id":2,"name":"Analytics Helper","data_sensitivity":2,"access_level":2,"compliance_score":85,"notes":"Low risk"}
+  ],
+  "controls":[
+    {"id":1,"code":"AC-1","title":"Access control","description":"Manage user access"},
+    {"id":2,"code":"LOG-1","title":"Logging","description":"Centralized logging"}
+  ]
+}
